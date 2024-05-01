@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.heading {
+  padding: $side-padding;
+  color: $primary-text;
+  background-color: $primary-background;
+}
+
+.UserList {
+  padding: $side-padding;
+  flex-grow: 1;
+  list-style: none;
+	justify-content: center;
+  background-color: $primary-background;
+}
+
+.formContainer {
+  position: absolute;
+  width: 100%;
+  max-height: calc(100% - 7.9rem);
+  overflow-y: scroll;
+  z-index: 2;
+  top: $header-height;
+  left: 0;
+  padding: $side-padding;
+  background-color: rgba($color: $secondary-background, $alpha: 0.8);
+  
+  transform: translate(0, -100%);
+  transition: all 0.7s ease-out;
+
+  &.show {
+    transform: translate(0, 0);
+  }
+
+  & > div {
+    max-width: 780px;
+    background-color: rgba($color: $secondary-background, $alpha: 1);
+    margin: auto;
+    border-radius: 10px;
+  }
+}
+
+button.danger {
+  background-color: crimson;
+  cursor: pointer;
+  position: fixed;
+  right: 3.5rem;
+  top: 6.31rem;
+  z-index: 99;
+  font-weight: 500;
+  font-size: 1.3rem;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  transform: translateX(300%);
+
+  transition: all 0.5s ease-out;
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  &:hover {
+    color: crimson;
+    border-color: crimson;
+    background-color: $secondary-background;
+  }
+}

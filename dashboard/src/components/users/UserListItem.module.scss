@@ -1,0 +1,89 @@
+@import '../../variables.scss';
+
+.UserListItem {
+  background-color: $secondary-background;
+	color: $secondary-text;
+	min-height: 15rem;
+  padding: $side-padding;
+  margin-bottom: /*$side-padding*/3rem;
+	border: 1px solid #c1c1c1;
+	border-radius: 23px;
+	box-shadow: -2px 7px 21px -9px #000;
+
+  display: grid;
+  row-gap: $side-padding;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+
+  b {
+    display: inline-block;
+    width: 9rem;
+    overflow: hidden;
+  }
+
+  .dp {
+    grid-column: 1 / 4;
+
+    img {
+	    max-height: 8rem;
+	    object-fit: cover;
+	    border-radius: 4px;
+    }
+  }
+
+  .bio {
+    grid-column: 5 / -1;
+    
+    p {
+      font-weight: 300;
+      margin-top: .46rem;
+    }
+  }
+
+  .name {
+    grid-column: 1 / 4;
+  }
+
+  .info {
+    grid-column: 5 / -1;
+  }
+
+  .actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background-color: #252b35;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      font-size: 1rem;
+      padding: 10px 2rem;
+      transition: all 0.5s ease-out;
+
+      &:hover {
+        color: #61dafb;
+        border-color: #61dafb;
+      }
+
+      &.danger {
+        background-color: crimson;
+
+        &:hover {
+          color: crimson;
+          border-color: crimson;
+          background-color: $secondary-background;
+        }
+      }
+    }
+
+    button:nth-child(2) {
+      margin: 0 5rem;
+    }
+  }
+}

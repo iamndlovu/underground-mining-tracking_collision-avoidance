@@ -1,0 +1,11 @@
+@import "./../../variables.scss";
+
+.Footer {
+	background: $secondary-background;
+	color: $secondary-text;
+	padding:$side-padding;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	border-top: 1px solid $secondary-text;
+}

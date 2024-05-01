@@ -1,0 +1,17 @@
+{
+  "name": "underground-mining-tracking-and-collision-avoidance-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2"
+  },
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Pardon Ndlovu",
+  "license": "MIT"
+}

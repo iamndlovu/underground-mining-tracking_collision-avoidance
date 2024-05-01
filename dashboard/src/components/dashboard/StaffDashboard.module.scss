@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.StaffDashboard{
+  padding: $side-padding;
+  flex: 1;
+  display: grid;
+  gap: 16px;
+  grid-template-areas: 'overview activity'
+  'actions actions'
+  'reqs reqs'
+  'files files';
+
+  .overview {
+    grid-area: overview;
+  }
+
+  .activity {
+    grid-area: activity;
+    display: flex;
+    justify-content: flex-end;
+
+    .container {
+      width: fit-content;
+    }
+  }
+
+  .reqs {
+    grid-area: reqs;
+  }
+
+  .adminActions {
+    grid-area: actions;
+  }
+
+  .files {
+    grid-area: files;
+  }
+}

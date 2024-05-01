@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+.UserOverview {
+	color: $secondary-text;
+	width: 100%;
+	height: 100%;
+
+	.container {
+		width: fit-content;
+		display: grid;
+
+		.avatar {
+			height: 10.726384rem;
+			margin-bottom: 10px;
+			overflow: hidden;
+			display: flex;
+			// gitjustify-content: center;
+			align-items: center;
+
+			img {
+				max-width: 100%;
+				max-height: 10.726384rem;
+			}
+		}
+
+		.userInfo {
+			display: grid;
+			gap: 10px;
+
+			h2 {
+				font-weight: 400;
+			}
+
+			h4 {
+				font-weight: 400;
+				font-size: 1rem;
+
+				.username {
+					color: darken($color: $link-color, $amount: 30);
+				}
+
+				.separator {
+					display: inline-block;
+					background-color: lighten($color: $primary-background, $amount: 20);
+					width: 6px;
+					height: 3.34px;
+					border-radius: 50%;
+					margin: 0 8px 2px 8px;
+				}
+			}
+
+			p {
+				font-size: 0.873rem;
+				font-weight: 300;
+			}
+		}
+	}
+}
