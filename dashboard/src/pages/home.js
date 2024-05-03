@@ -5,7 +5,12 @@ import Layout from '../components/Layout';
 
 const Home = ({ user }) => {
   return (
-    <Layout title='Welcome to UMT & CAS' user={user}>
+    <Layout
+      title='Welcome to UMT & CAS'
+      user={user}
+      hideFooter={true}
+      hideHeader={true}
+    >
       {user ? (
         user.temp ? (
           <Navigate to='/register' replace />

@@ -5,6 +5,7 @@ import Login from './pages/login';
 import Logout from './pages/logout';
 import Register from './pages/register';
 import Users from './pages/users';
+import Data from './pages/data';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -48,6 +49,7 @@ function App() {
             path='/register'
             element={<Register user={user} handler={handleLougout} />}
           />
+          <Route path='/data' element={<Data user={user} />} />
           <Route path='/users' element={<Users user={user} />} />
         </Routes>
       </BrowserRouter>

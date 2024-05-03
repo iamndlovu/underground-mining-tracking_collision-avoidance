@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Who cares",
   "main": "server/index.js",
-  "devDependencies": {},
   "scripts": {
     "client-install": "npm install --prefix dashboard",
     "server-install": "npm install --prefix server",
@@ -16,7 +15,9 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "date-fns": "^3.6.0",
+    "express": "^4.19.2"
   },
   "author": "Pardon Ndlovu",
   "license": "MIT"

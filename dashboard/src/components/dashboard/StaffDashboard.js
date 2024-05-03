@@ -1,28 +1,48 @@
 import React from 'react';
 import UserOverview from './UserOverview';
-import AdminActions from './AdminActions';
 
 import styles from './StaffDashboard.module.scss';
+import btn from '../../button.module.scss';
+import { NavLink } from 'react-router-dom';
+import Card from '../Card';
 
 const StaffDashboard = ({ user }) => {
-  const { level } = user;
   return (
     <main className={styles.StaffDashboard}>
-      <div className={styles.overview}>
-        <UserOverview user={user} />
-      </div>
-      <div className={styles.activity}>
-        <div className={styles.container}>
-          {/* <RecentActivity activityIDs={user.logs} userID={user._id} /> */}
+      <div>
+        <section className={styles.container}>
+          <Card
+            title='reports'
+            navItems={[
+              { text: 'live tracking', link: '/live-data' },
+              { text: 'data tracking', link: '/data' },
+              { text: 'system users', link: '/users' },
+            ]}
+          />
+          <Card
+            title='automobiles'
+            navItems={[
+              { text: 'all automobiles', link: '/automobiles' },
+              { text: 'add automobile', link: '/automobiles/add' },
+            ]}
+          />
+          <Card
+            title='employees'
+            navItems={[
+              { text: 'all employees', link: '/employees' },
+              { text: 'add employee', link: '/employees/add' },
+            ]}
+          />
+        </section>
+        <div className={styles.overview}>
+          <section>
+            <UserOverview user={user} />
+            <button onClick={() => {}} className={btn.button}>
+              <NavLink to='/logout'>LOGOUT</NavLink>
+            </button>
+          </section>
         </div>
       </div>
-      {level === 0 && (
-        <div className={styles.adminActions}>
-          <AdminActions />
-        </div>
-      )}
-      <div className={styles.reqs}>{/* <PushRequests user={user} /> */}</div>
-      <div className={styles.files}>{/* <RecentFiles /> */}</div>
     </main>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './UserOverview.module.scss';
-import avatar from '../../assets/images/user.png';
+// import avatar from '../../assets/images/user.png';
 
 const UserOverview = ({ user }) => {
   let { username, fullName, level } = user;
@@ -21,9 +21,9 @@ const UserOverview = ({ user }) => {
   return (
     <section className={styles.UserOverview}>
       <div className={styles.container}>
-        <div className={styles.avatar}>
+        {/*   <div className={styles.avatar}>
           <img src={avatar} alt={user.username} />
-        </div>
+        </div> */}
         <div className={styles.userInfo}>
           <h2>{fullName}</h2>
           <h4>

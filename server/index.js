@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const user = require('./routes/users');
+const data = require('./routes/data');
 
 /*****************************************************************************
  *                                                                           *
@@ -13,7 +14,7 @@ const user = require('./routes/users');
  *                                                                           *
  *                                                                           *
  *****************************************************************************/
-// data_rank 	ID 	Safety Distance 	Distance Status 	Location Latitude 	Location Longitude 	Distance From Zone1 	Distance From Zone2 	Distance From Zone3 	Location Status 	Overall Status 	readings_date
+
 const app = express();
 
 //middleware
@@ -38,6 +39,7 @@ app.post('/secreteID', (req, res) => {
 });
 
 app.use('/users', user);
+app.use('/data', data);
 
 const PORT = process.env.PORT || 5000;
 

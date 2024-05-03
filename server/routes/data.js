@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Obstacle = require('../models/Obstacle.model');
+let Obstacle = require('../models/Data.model');
 
 router.route('/').get(async (req, res) => {
   try {
@@ -25,11 +25,10 @@ router.route('/:id').get(async (req, res) => {
   }
 });
 
-// data_rank 	ID 	Safety Distance 	Distance Status 	Location Latitude 	Location Longitude 	Distance From Zone1 	Distance From Zone2 	Distance From Zone3 	Location Status 	Overall Status 	readings_date
-
 router.route('/add').post(async (req, res) => {
   const {
     objectID,
+    type,
     safetyDistance,
     distanceStatus,
     gps,
@@ -39,6 +38,7 @@ router.route('/add').post(async (req, res) => {
 
   let object = {
     objectID,
+    type,
     safetyDistance,
     distanceStatus,
     overallStatus,

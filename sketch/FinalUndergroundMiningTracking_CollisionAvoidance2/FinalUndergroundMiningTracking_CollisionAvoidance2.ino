@@ -309,12 +309,9 @@ void setup() {
   
   pinMode(Trig_PIN1, OUTPUT); 
   pinMode(Echo_PIN1, INPUT);
-  //pinMode(stop_pin, INPUT);
   pinMode(BUZZER_PIN, OUTPUT);
 
   digitalWrite(BUZZER_PIN, LOW);
-  //LN 298 Driver Pins
-  //LN 298 Driver Pins
   pinMode(13, OUTPUT);
   pinMode(12, OUTPUT);
   pinMode(14, OUTPUT);
@@ -325,7 +322,7 @@ void setup() {
   digitalWrite(14, LOW);
   digitalWrite(26, LOW);
 
-  SPI.begin(); // init SPI bus
+  SPI.begin(); // init SPI bus TODO
   //rfid.PCD_Init(); // init MFRC522
   mfrc522.PCD_Init(); // Initialise MFRC522
 

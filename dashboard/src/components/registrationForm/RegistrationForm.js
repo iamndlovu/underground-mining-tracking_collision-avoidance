@@ -140,7 +140,7 @@ const RegistrationForm = ({ user, toggleForm, handler }) => {
               onChange={onChangeLevel}
               required
             >
-              <option value={1}>--Select Access Level--</option>
+              <option value={10}>--Select Access Level--</option>
               <option value={0}>Administrator</option>
               <option value={1}>Operator</option>
             </select>

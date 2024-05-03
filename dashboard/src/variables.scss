@@ -7,3 +7,33 @@ $secondary-text: #333;
 $link-color: #61dafb;
 $header-height: 4.31rem;
 $mobile-header-height: 2.31rem;
+
+@keyframes warningBlink {
+  0% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: rgb(12, 245, 12);
+  }
+}
+
+@keyframes alarmBlink {
+  0% {
+    background-color: orangered;
+  }
+
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes dangerBlink {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: red;
+  }
+}
