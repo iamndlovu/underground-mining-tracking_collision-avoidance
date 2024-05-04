@@ -4,16 +4,8 @@ const mongoose = require('mongoose');
 
 const user = require('./routes/users');
 const data = require('./routes/data');
-
-/*****************************************************************************
- *                                                                           *
- *                                                                           *
- *       DISTANCE STATUS:                                                    *
- *       0 -> safe zone,  1 -> caution zone                                  *
- *       2 -> alarm zone, 3 -> danger zone                                   *
- *                                                                           *
- *                                                                           *
- *****************************************************************************/
+const automobile = require('./routes/automobiles');
+const employee = require('./routes/employees');
 
 const app = express();
 
@@ -40,6 +32,8 @@ app.post('/secreteID', (req, res) => {
 
 app.use('/users', user);
 app.use('/data', data);
+app.use('/automobiles', automobile);
+app.use('/employees', employee);
 
 const PORT = process.env.PORT || 5000;
 
