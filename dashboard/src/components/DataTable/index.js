@@ -48,8 +48,10 @@ const DataTable = ({ showAll }) => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Latitude</td>
-                  <td>Longitude</td>
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Latitude&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>&nbsp;&nbsp;&nbsp;Longitude&nbsp;&nbsp;</td>
                 </tr>
               </tbody>
             </table>
