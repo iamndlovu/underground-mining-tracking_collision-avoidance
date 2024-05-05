@@ -1,9 +1,17 @@
 import React from 'react';
 import SingleTag from './SingleTag';
 
-const sidePadding = '0.63rem';
+const Tags = ({ taglist, sidePadding }) => {
+  const tagListStyles = {
+    listStyle: 'none',
+    margin: '0',
+    padding: `0.45rem 0 0.45rem ${sidePadding}`,
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  };
 
-const Tags = ({ taglist }) => {
   return (
     <ul style={tagListStyles}>
       {taglist &&
@@ -12,15 +20,6 @@ const Tags = ({ taglist }) => {
         ))}
     </ul>
   );
-};
-
-const tagListStyles = {
-  listStyle: 'none',
-  margin: '0',
-  padding: `0.45rem 0 0.45rem ${sidePadding}`,
-  display: 'flex',
-  flexWrap: 'wrap',
-  alignItems: 'center',
 };
 
 export default Tags;
