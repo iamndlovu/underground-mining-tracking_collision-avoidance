@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.EmployeeList {
+  flex-grow: 1;
+  background: $secondary-background;
+  color: $secondary-text;
+  padding: $side-padding;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  gap: $side-padding;
+  justify-content: center;
+}

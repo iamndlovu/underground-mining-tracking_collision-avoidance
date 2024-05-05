@@ -1,0 +1,12 @@
+@import '../../../variables.scss';
+
+.container {
+  .EmployeeCard {
+    background-color: $secondary-background;
+    color: $secondary-text;
+    min-height: 15rem;
+    border: 1px solid #c1c1c1;
+    border-radius: 12px;
+    box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  }
+}

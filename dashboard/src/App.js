@@ -7,6 +7,7 @@ import Register from './pages/register';
 import Users from './pages/users';
 import Data from './pages/data';
 import LiveData from './pages/live-data';
+import Employees from './pages/employees';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -53,6 +54,7 @@ function App() {
           <Route path='/data' element={<Data user={user} />} />
           <Route path='/live-data' element={<LiveData user={user} />} />
           <Route path='/users' element={<Users user={user} />} />
+          <Route path='/employees' element={<Employees user={user} />} />
         </Routes>
       </BrowserRouter>
     </div>
