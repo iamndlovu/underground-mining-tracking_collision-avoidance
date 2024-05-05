@@ -8,6 +8,7 @@ import Users from './pages/users';
 import Data from './pages/data';
 import LiveData from './pages/live-data';
 import Employees from './pages/employees';
+import Automobiles from './pages/automobiles';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -55,6 +56,7 @@ function App() {
           <Route path='/live-data' element={<LiveData user={user} />} />
           <Route path='/users' element={<Users user={user} />} />
           <Route path='/employees' element={<Employees user={user} />} />
+          <Route path='/automobiles' element={<Automobiles user={user} />} />
         </Routes>
       </BrowserRouter>
     </div>

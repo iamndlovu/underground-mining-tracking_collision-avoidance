@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
-.EmployeeList {
+.EmployeeList,
+.AutomobileList {
   flex-grow: 1;
   background: $secondary-background;
   color: $secondary-text;
