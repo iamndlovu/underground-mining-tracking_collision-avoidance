@@ -16,7 +16,7 @@ const EmployeeCard = ({ employee, automobile }) => {
     fullName = employee.fullName;
     uid = employee.uid;
     gender = employee.gender;
-    age = employee.gender;
+    age = employee.age;
     grade = employee.grade;
   }
 

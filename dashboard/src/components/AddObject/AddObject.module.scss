@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+.AddObject {
+  flex-basis: 680px;
+  flex-shrink: 1;
+  padding: $side-padding;
+  color: $secondary-text;
+
+  .formHead {
+    font-size: 2.1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
