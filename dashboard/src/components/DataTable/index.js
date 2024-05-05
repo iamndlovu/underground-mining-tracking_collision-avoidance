@@ -13,14 +13,20 @@ const DataTable = ({ showAll }) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    (async () => {
+    const fetchData = async () => {
       try {
         const dataRes = await axios.get('http://localhost:5000/data');
         setData(dataRes.data);
       } catch (err) {
         console.error(`Failed to fetch data from server:\n\t\t${err}`);
       }
-    })();
+    };
+
+    fetchData();
+
+    const fetchDataPeriodically = setInterval(() => fetchData(), 5000);
+
+    return clearInterval(fetchDataPeriodically);
   }, []);
 
   return (
