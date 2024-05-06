@@ -201,7 +201,7 @@ bool readID() {
     ID.toUpperCase();
     mfrc522.PICC_HaltA(); // Stop reading
     return true;
-  }
+}
 
 
 float safetyDistancee() {
@@ -634,7 +634,7 @@ void loop() {
       sendSms();
     } 
     httpRequest(ID, safetyDistance, locationLatitude, locationLongitude);
-  delay(3000);
+    delay(3000);
   }
 }//end of void main
 

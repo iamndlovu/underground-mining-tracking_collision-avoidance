@@ -10,9 +10,9 @@ const { Schema, model } = require('mongoose');
  *                                                                           *
  *       OBJECT TYPE:      |  OVERALL STATUS:                                *
  *       0 -> automobile   |  0 -> SAFE                                      *
- *       1 -> employee     |  1 -> CAUTION                                   *
- *       2 -> unknown      |  2 -> ALARM                                     *
- *                         |  3 -> DANGER                                    *
+ *       1 -> employee     |  1 -> AlARM ON, SMS OFF                                  *
+ *       2 -> unknown      |  2 -> ALARM ON, SMS ON                                  *
+ *                         |  3 -> UNKNOWN                                  *
  *                                                                           *
  *       LOCATION STATUS:                                                    *
  *       0 -> closest to zone 1                                              *

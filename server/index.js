@@ -30,6 +30,11 @@ app.post('/secreteID', (req, res) => {
   res.json(id == superUserID);
 });
 
+app.post('/test', (req, res) => {
+  console.table(req.body);
+  res.json(req.body);
+});
+
 app.use('/users', user);
 app.use('/data', data);
 app.use('/automobiles', automobile);

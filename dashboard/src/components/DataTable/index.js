@@ -109,9 +109,9 @@ const DataTable = ({ showAll }) => {
             const overallText =
               [
                 'notifications OFF',
-                'notifications OFF',
                 'alarm ON',
-                'SMS Sent; Alarm ON',
+                'alarm ON, SMS sent',
+                'unknown',
               ][overallStatus] || 'unknown';
 
             const overallClass =
